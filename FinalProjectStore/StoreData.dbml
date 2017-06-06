@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Store" Class="StoreDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MININT-9UUBA0C\SQLEXPRESS;Initial Catalog=Store;Integrated Security=True" SettingsObjectName="FinalProjectStore.Properties.Settings" SettingsPropertyName="StoreConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MInit" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="CreditLimit" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="userid" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="pword" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Customer_Invoice" Member="Invoices" ThisKey="CustID" OtherKey="CustID" Type="Invoice" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Invoice" Member="Invoices">
+    <Type Name="Invoice">
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProdID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="orderDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TotalBal" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPaid" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Invoice" Member="Customer" ThisKey="CustID" OtherKey="CustID" Type="Customer" IsForeignKey="true" />
+      <Association Name="Product_Invoice" Member="Product" ThisKey="ProdID" OtherKey="ProdID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProdID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descr" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PricePerUnit" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="totAvail" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Invoice" Member="Invoices" ThisKey="ProdID" OtherKey="ProdID" Type="Invoice" />
+      <Association Name="Vendor_Product" Member="Vendor" ThisKey="VendorID" OtherKey="VendorID" Type="Vendor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vendor" Member="Vendors">
+    <Type Name="Vendor">
+      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Vendor_Product" Member="Products" ThisKey="VendorID" OtherKey="VendorID" Type="Product" />
+    </Type>
+  </Table>
+</Database>

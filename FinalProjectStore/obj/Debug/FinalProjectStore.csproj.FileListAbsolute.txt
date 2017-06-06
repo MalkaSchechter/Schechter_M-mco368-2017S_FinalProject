@@ -1,0 +1,13 @@
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\bin\Debug\FinalProjectStore.exe.config
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\bin\Debug\FinalProjectStore.exe
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\bin\Debug\FinalProjectStore.pdb
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.csprojResolveAssemblyReference.cache
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.frmLogin.resources
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.Properties.Resources.resources
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.csproj.GenerateResource.Cache
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.exe
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.pdb
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.frmProducts.resources
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.frmHome.resources
+c:\users\malky\documents\visual studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.frmPurchase.resources
+C:\Users\Malky\Documents\Visual Studio 2015\Projects\FinalProjectStore\FinalProjectStore\obj\Debug\FinalProjectStore.frmAccount.resources
